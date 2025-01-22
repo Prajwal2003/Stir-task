@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Trends</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .data-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            background-color: #f9f9f9;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Latest Twitter Trend</h1>
+    <button onclick="refreshData()">Refresh Data</button>
+    <button onclick="runScript()">Run Scraping</button>
+    <br /><br /><br />
+
+    <div class="data-container">
+        <p><strong>Trend:</strong> <span id="trend">{{ trend }}</span></p>
+        <p><strong>Date:</strong> <span id="date">{{ date }}</span></p>
+        <p><strong>Date:</strong> <span id="IP address">{{ ip }}</span></p>
+    </div>
+
+    <script>
+        function refreshData() {
+            fetch('/refresh')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('trend').innerText = data.trends || 'No data available';
+                    document.getElementById('date').innerText = data.timestamp.split('T')[0] || 'N/A';
+                    document.getElementById('time').innerText = data.timestamp.split('T')[1].slice(0, 8) || 'N/A';
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        function runScript() {
+            fetch('/run-script')
+                .then(response => response.json())
+                .then(data => {
+                    alert('Scraping completed!');
+                    document.getElementById('trend').innerText = data.trends || 'No data available';
+                    document.getElementById('date').innerText = data.timestamp.split('T')[0] || 'N/A';
+                    document.getElementById('time').innerText = data.timestamp.split('T')[1].slice(0, 8) || 'N/A';
+                })
+                .catch(error => console.error('Error running script:', error));
+        }
+    </script>
+</body>
+</html>
