@@ -27,7 +27,7 @@ This project automates the process of scraping Twitter trends using **Python, Fl
 
 ---
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
 ### 1. Prerequisites
 Ensure you have the following installed:
@@ -44,7 +44,7 @@ pip install flask selenium pymongo certifi flask-socketio
 
 ---
 
-## 🔧 How to Run the Project
+## How to Run the Project
 
 1. **Clone the Repository (If applicable):**
    ```bash
@@ -72,7 +72,7 @@ pip install flask selenium pymongo certifi flask-socketio
 
 ---
 
-## 🖥️ How the Project Works
+## How the Project Works
 
 1. **Initial Page Load (`/` route):**  
    - Fetches the latest trends from MongoDB and displays them.
@@ -87,7 +87,7 @@ pip install flask selenium pymongo certifi flask-socketio
 
 ---
 
-## 📊 Expected Output
+## Expected Output
 
 The web page displays:
 
@@ -100,7 +100,7 @@ Latest Twitter Trends:
 
 ---
 
-## 📧 Contact
+## Contact
 
 For any queries, reach out to:
 
