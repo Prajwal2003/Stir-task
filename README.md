@@ -1,11 +1,11 @@
 # Web Scraping Project - Twitter Trends
 
-## 📌 Project Overview
+## Project Overview
 This project automates the process of scraping Twitter trends using **Python, Flask, Selenium**, and **MongoDB**, and updates the results dynamically on a web page.
 
 ---
 
-## 🏆 Objective
+## Objective
 1. **Scrape Latest Twitter Trends:**  
    - Automate the retrieval of trending topics from Twitter.
    - Store the data in a MongoDB database.
@@ -13,10 +13,6 @@ This project automates the process of scraping Twitter trends using **Python, Fl
 2. **Analyze and Display the Data:**  
    - Fetch the latest data from MongoDB.
    - Dynamically display the trends on a Flask web page.
-
-3. **Provide Interactive Web Interface:**  
-   - Run the scraping script.
-   - Refresh data using buttons on the web page.
 
 ---
 
@@ -31,24 +27,6 @@ This project automates the process of scraping Twitter trends using **Python, Fl
 
 ---
 
-## 📂 Project Structure
-
-```
-FirstName_LastName_SDET/
-│-- resume.pdf                        # Your resume
-│-- exactspace.har                     # Generated HAR file
-│-- status_code_counts.json             # JSON output with status code counts
-│-- sdet_script.py                      # Python source code for automation
-│-- templates/
-│   └── index.html                      # Webpage for displaying trends
-│-- static/
-│   └── styles.css                       # CSS styles for UI
-│-- app.py                              # Flask application for the project
-│-- README.md                           # Project documentation
-```
-
----
-
 ## 🚀 Setup Instructions
 
 ### 1. Prerequisites
@@ -60,12 +38,6 @@ Ensure you have the following installed:
 - **MongoDB Atlas** (Cloud Database) → [Set up here](https://www.mongodb.com/cloud/atlas)
 
 ### 2. Install Required Python Libraries
-
-```bash
-pip install -r requirements.txt
-```
-
-If you don't have a `requirements.txt`, install manually:
 
 ```bash
 pip install flask selenium pymongo certifi flask-socketio
