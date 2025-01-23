@@ -16,12 +16,12 @@ This project automates the process of scraping Twitter trends using **Python, Fl
 
 ---
 
-## ⚙️ Technologies Used
+## Technologies Used
 - **Python** (Backend Logic)
 - **Flask** (Web Application Framework)
 - **Selenium** (Web Automation)
 - **MongoDB** (Database)
-- **JavaScript (AJAX, jQuery)** (Frontend Updates)
+- **JavaScript** (Frontend Updates)
 - **HTML/CSS** (Web Page Layout)
 - **Chrome WebDriver** (Browser Automation)
 
@@ -34,7 +34,6 @@ Ensure you have the following installed:
 
 - **Python 3.x** → [Download here](https://www.python.org/downloads/)
 - **Google Chrome** → [Download here](https://www.google.com/chrome/)
-- **ChromeDriver** (matching Chrome version) → [Download here](https://sites.google.com/chromium.org/driver/)
 - **MongoDB Atlas** (Cloud Database) → [Set up here](https://www.mongodb.com/cloud/atlas)
 
 ### 2. Install Required Python Libraries
@@ -53,13 +52,9 @@ pip install flask selenium pymongo certifi flask-socketio
    cd web-scraping-project
    ```
 
-2. **Set Up ChromeDriver and Proxy Paths:**  
-   Edit the `app.py` file and update paths accordingly:
-
-   ```python
-   server = Server("/path/to/browsermob-proxy/bin/browsermob-proxy")
-   chrome_service = Service("/path/to/chromedriver")
-   ```
+2. **Enter you Credentials**  
+   Edit the `creds.yaml` and `filezip.py`(this will generate the proxy setting zip) file and update paths accordingly:
+   
 
 3. **Run the Flask Application:**  
    Use the following command to start the Flask web server:
@@ -81,17 +76,14 @@ pip install flask selenium pymongo certifi flask-socketio
 
 1. **Initial Page Load (`/` route):**  
    - Fetches the latest trends from MongoDB and displays them.
-   - Starts the scraping process.
+   - Shows 2 button - Run scraper and Refresh Data
 
-2. **Scraping Process:**  
+2. **Clicking Run scraper - Scraping python code is run:**  
    - Uses Selenium to scrape Twitter trends.
    - Saves the data into MongoDB.
 
-3. **Refreshing the Data:**  
+3. **Clicking on Refresh Data - Refreshes the Data:**  
    - Users can click the "Refresh" button to get the latest data.
-
-4. **Running the Scraper Manually:**  
-   - Clicking the "Run Scraper" button triggers the Python script.
 
 ---
 
@@ -101,57 +93,10 @@ The web page displays:
 
 ```
 Latest Twitter Trends:
-- Trend: #Python
+- Trend: #Trend1 #Trend2 ...
 - Date: 2025-01-22
-- Time: 14:45:10
+- IP: 142.45.10.5
 ```
-
-A JSON file (`status_code_counts.json`) will also contain:
-
-```json
-{
-    "Total Status Codes": 150,
-    "2XX Count": 120,
-    "4XX Count": 20,
-    "5XX Count": 10
-}
-```
-
----
-
-## 📝 Deliverables
-
-Submit a zip folder named as:
-
-```
-FirstName_LastName_SDET.zip
-```
-
-Contents of the folder:
-
-1. **Your resume** - `resume.pdf`
-2. **Python script** - `app.py`
-3. **Generated HAR file** - `exactspace.har`
-4. **Output file** - `status_code_counts.json`
-
----
-
-## 🛠️ Troubleshooting
-
-### 1. Flask App Not Starting  
-   **Error:** `ModuleNotFoundError: No module named 'flask'`  
-   **Solution:**  
-   - Install Flask using `pip install flask`.
-
-### 2. ChromeDriver Version Mismatch  
-   **Error:** `chromedriver executable needs to be in PATH`  
-   **Solution:**  
-   - Download the correct ChromeDriver version matching your Chrome browser.
-
-### 3. MongoDB Connection Issues  
-   **Error:** `ServerSelectionTimeoutError`  
-   **Solution:**  
-   - Ensure the correct MongoDB Atlas connection string in `app.py`.
 
 ---
 
@@ -159,11 +104,7 @@ Contents of the folder:
 
 For any queries, reach out to:
 
-- **Email:** your.email@example.com
-- **GitHub:** [yourgithub](https://github.com/yourgithub)
-
----
-
-### ✅ Happy Coding! 🎯
+- **Email:** prajwalgh13@gmail.com
+- **GitHub:** https://github.com/Prajwal2003
 ```
 
