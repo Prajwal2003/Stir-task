@@ -92,10 +92,13 @@ pip install flask selenium pymongo certifi flask-socketio
 The web page displays:
 
 ```
-Latest Twitter Trends:
-- Trend: #Trend1 #Trend2 ...
-- Date: 2025-01-22
-- IP: 142.45.10.5
+        Latest Twitter Trends:
+
+||  Run Scraper  ||  Refresh Data  ||
+
+      Trend: #Trend1 #Trend2 ...
+         Date: 2025-01-22
+         IP: 142.45.10.5
 ```
 
 ---
@@ -104,6 +107,7 @@ Latest Twitter Trends:
 
 For any queries, reach out to:
 
+```
 - **Email:** prajwalgh13@gmail.com
 - **GitHub:** https://github.com/Prajwal2003
 ```
