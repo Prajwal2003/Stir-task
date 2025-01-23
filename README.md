@@ -108,7 +108,7 @@ The web page displays:
 For any queries, reach out to:
 
 ```
-- **Email:** prajwalgh13@gmail.com
-- **GitHub:** https://github.com/Prajwal2003
+- Email: prajwalgh13@gmail.com
+- GitHub: https://github.com/Prajwal2003
 ```
 
